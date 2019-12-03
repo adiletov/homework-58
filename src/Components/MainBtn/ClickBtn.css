@@ -1,0 +1,174 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ace;
+}
+.icon {
+    background-color: transparent;
+    border: 0;
+    color: #557eef;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    margin: 3em auto 0 auto;
+    position: relative;
+    width: 9em;
+    height: 9em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.icon:focus {
+    /* This may be anti-A11Y, but just for this demo suppresses the annoyance */
+    outline: 0;
+}
+.icon div {
+    position: absolute;
+}
+.cloud {
+    transition: opacity 0.1s linear;
+}
+/* Cloud */
+.cloud {
+    top: 0;
+    width: 9em;
+    height: 5.8em;
+}
+.puff, .cloud-core {
+    background-color: #fff;
+}
+.puff {
+    border-radius: 50%;
+}
+.puff-1 {
+    top: 2.5em;
+    left: 0;
+    width: 3.3em;
+    height: 3.3em;
+}
+.puff-2 {
+    top: 1em;
+    left: 1.2em;
+    width: 3em;
+    height: 3em;
+}
+.puff-3 {
+    top: 0;
+    left: 3em;
+    width: 4.6em;
+    height: 4.6em;
+}
+.puff-4 {
+    top: 1.8em;
+    left: 5em;
+    width: 4em;
+    height: 4em;
+}
+.puff-5 {
+    top: 2.3em;
+    left: 2.4em;
+    width: 3.5em;
+    height: 3.5em;
+}
+.puff-6 {
+    top: 2.3em;
+    left: 3em;
+    width: 3.5em;
+    height: 3.5em;
+}
+.puff-7 {
+    top: 2.4em;
+    left: 1em;
+    width: 1.8em;
+    height: 1.8em;
+}
+.puff-8 {
+    top: 1.2em;
+    left: 2.5em;
+    width: 2em;
+    height: 2em;
+}
+.puff-9 {
+    top: 1.8em;
+    left: 5.5em;
+    width: 2em;
+    height: 2em;
+}
+.puff-10 {
+    top: 3.6em;
+    left: 3.5em;
+    width: 2.2em;
+    height: 2.2em;
+}
+.cloud-core {
+    top: 1.8em;
+    left: 1.8em;
+    width: 5em;
+    height: 4em;
+}
+.check {
+    top: 0;
+    left: 1.6em;
+    width: 5.8em;
+    height: 5.8em;
+    position: relative;
+    transform: scale(0);
+    z-index: -1;
+}
+.check:before, .check:after {
+    background-color: currentColor;
+    content: "";
+    bottom: 0;
+    display: block;
+    left: 2.5em;
+    position: absolute;
+    width: 0.8em;
+}
+.check:before {
+    height: 3em;
+    transform: rotate(-55deg);
+    transform-origin: 50% 2.6em;
+}
+.check:after {
+    height: 5.5em;
+    transform: rotate(35deg);
+    transform-origin: 50% 5.1em;
+}
+/* Arrow */
+.arrow {
+    top: 3em;
+    left: 0;
+    width: 9em;
+    height: 5.3em;
+}
+.arrow div, .progress {
+    border-radius: 0.4em;
+}
+.arrow div {
+    background-color: currentColor;
+}
+.arrow-stem {
+    bottom: 0;
+    left: 4.1em;
+    width: 0.8em;
+    height: 5.3em;
+    transform-origin: 50% 100%;
+}
+.arrow-l-tip, .arrow-r-tip {
+    left: calc(50% - 0.4em);
+    bottom: 0;
+    width: 2.6em;
+    height: 0.8em;
+    transform-origin: 0.4em 50%;
+}
+.arrow-l-tip {
+    transform: rotate(-135deg);
+}
+.arrow-r-tip {
+    transform: rotate(-45deg);
+}
+
+

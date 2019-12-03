@@ -1,0 +1,27 @@
+.alert{
+    border-radius: 8px;
+    background: #848484;
+    width: 30%;
+    padding: 10px;
+}
+.secondary{
+    background: linear-gradient(to bottom, rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(128,194,23,1) 51%,rgba(124,188,10,1) 100%);
+    color: white;
+}
+.secondary:hover{
+    background: linear-gradient(to bottom, rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%);
+}
+.success{
+    color: white;
+    background: linear-gradient(to bottom, rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%);
+}
+.success:hover{
+    background: linear-gradient(to bottom, rgba(254,204,177,1) 0%,rgba(241,116,50,1) 50%,rgba(234,85,7,1) 51%,rgba(251,149,94,1) 100%);
+}
+.btn{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    float: right;
+}

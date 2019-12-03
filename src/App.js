@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import './App.css'
+import ClickBtn from "./Components/MainBtn/ClickBtn";
+import Modal from "./Components/Modal/Modal";
+import Alert from "./Components/Alert/Alert";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+
+class App extends Component {
+  state = {
+    purchasing: false,
+  };
+
+  purchaseHandler = () => {
+    this.setState({purchasing: true});
+  };
+  purchaseCancelHandler = () => {
+    this.setState({purchasing: false});
+  };
+
+  purchaseContinueHandler = () => {
+    alert('You continued')
+  };
+
+  render() {
+    return (
+      <div className='App'>
+        <ClickBtn
+          purchaseHandler={this.purchaseHandler}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        </ClickBtn>
+        <Modal
+          show={this.state.purchasing}
+          close={this.purchaseCancelHandler}
+          purchaseContinueHandler={this.purchaseContinueHandler}
+          purchaseCancelHandler={this.purchaseCancelHandler}
+        >
+          <h1>Скачать</h1>
+          <p>Shayne Ward - No Promises</p>
+        </Modal>
+          <div className="secondTask">
+              <Alert
+                  type='secondary'
+                  dismiss={this.purchaseContinueHandler}
+              >
+                  This is secondary alert
+              </Alert>
+              <Alert
+                  type='success'
+                  dismiss={this.purchaseContinueHandler}
+                  clickDismissable
+              >
+                  This is success alert with close button
+              </Alert>
+          </div>
+      </div>
+    );
+  }
 }
 
 export default App;
